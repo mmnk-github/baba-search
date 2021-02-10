@@ -6,8 +6,6 @@ BABA IS YOU でアナグラム（文字の並び替え）してできる単語�
 使ったCSS：[こちら](https://watercss.kognise.dev/)  
 
 
-
-## ページ構成
 ## メインページ(1つだけ)
 テキストボックスに英小文字列を入力して送信すると、その文字列の中から任意の順番で文字を取り出すことで生成できるオブジェクトや動詞ブロックなどを一覧で表示します。  
 
@@ -28,3 +26,11 @@ BABA IS YOU でアナグラム（文字の並び替え）してできる単語�
 miso_soup(課題ガンバレ！)  
 
 ...And You!
+
+##### memo
+
+npmの導入検討など
+npmはNode.jsに入ってる
+[Node](https://nodejs.org/ja/)
+画像編集パッケージはsharpが有名どころらしい
+[Sharp](https://www.npmjs.com/package/sharp)
