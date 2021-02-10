@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<label for="aisu">input:</label>
+		<form id="form1">
+			<input type="text" name="" id="aisu" /> <input type="submit" id="sub" />
+		</form>
+		<span>result:</span>
+		<span id="res"></span>
+	</body>
+	<script>
+		const form = document.querySelector("#form1");
+		const input = document.querySelector("#aisu");
+		const res = document.querySelector("#res");
+
+		form.addEventListener("submit", (e) => {
+			//submitで発火
+			e.preventDefault(); //送信しない
+			res.innerHTML = input.value;
+		});
+	</script>
+</html>
