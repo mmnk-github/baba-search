@@ -23,8 +23,8 @@ for a in table.select("tr"):
         gif = img["data-src"]
         data.append({"name": name, "gif": gif})
 
-for d in data:
-    r = requests.get(d["gif"])
-    print(r)
-    with open("./Pages/image/" + d["name"] + ".gif", "wb") as file:
-        file.write(r.content)
+# for d in data:
+#     r = requests.get(d["gif"])
+#     print(r)
+#     with open("./Pages/image/" + d["name"] + ".gif", "wb") as file:
+#         file.write(r.content)
