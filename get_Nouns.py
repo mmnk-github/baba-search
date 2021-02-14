@@ -14,10 +14,17 @@ for article_table in soup.select(".article-table"):
             gif = img['data-src']
         data.append({"name": name, "gif": gif})
 
-for d in data:
-    if d["name"] == "FOFO":
-        r = requests.get(d["gif"])
-        print(r)
-        with open("./Pages/image/" + d["name"] + ".gif", "wb") as file:
-            file.write(r.content)
+table = soup.select_one(".table")
+for a in table.select("tr"):
+    img = a.select_one("img")
+    if img != None:
+        print(img)
+        name = img["alt"][5:-6]
+        gif = img["data-src"]
+        data.append({"name": name, "gif": gif})
 
+for d in data:
+    r = requests.get(d["gif"])
+    print(r)
+    with open("./Pages/image/" + d["name"] + ".gif", "wb") as file:
+        file.write(r.content)
