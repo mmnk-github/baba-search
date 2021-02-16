@@ -7,22 +7,22 @@ const imgObj = {
 // オブジェクト名: "画像ファイルへのパス"
 
 const form = document.querySelector("#form1");
-const input = document.querySelector("#aisu");
-const resBlock = document.querySelector("#resultBlock");
+const input = document.querySelector("#baba-input");
+const resBlock = document.querySelector("#result-block");
 
 form.addEventListener("submit", (e) => {
-    //submitで発火
-    e.preventDefault(); //送信しない
-    resBlock.innerHTML = "";
-    let aisu = input.value;
-    let aisuText = "<p>" + aisu + "</p>";
-    resBlock.insertAdjacentHTML("afterbegin", aisuText);
-    // カエルゲロゲロ🐸
-    if (aisu.toLowerCase().match(/fofo/)) {
-        console.log("found");
-        let img = '<img src="' + imgObj.fofo + '" />'
-        resBlock.insertAdjacentHTML("beforeend", img);
-    } else {
-        console.log("not found");
-    }
+  //submitで発火
+  e.preventDefault(); //送信しない
+  resBlock.innerHTML = "";
+  let aisu = input.value;
+  let aisuText = "<p>" + aisu + "</p>";
+  resBlock.insertAdjacentHTML("afterbegin", aisuText);
+  // カエルゲロゲロ🐸
+  if (aisu.toLowerCase().match(/fofo/)) {
+    console.log("found");
+    let img = '<img src="' + imgObj.fofo + '" />';
+    resBlock.insertAdjacentHTML("beforeend", img);
+  } else {
+    console.log("not found");
+  }
 });
