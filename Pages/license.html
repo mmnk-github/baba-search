@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./image/BABA.gif" type="image/gif" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>license</title>
-</head>
-<body>
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="クリエイティブ・コモンズ・ライセンス" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a><br />この 作品 は <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">クリエイティブ・コモンズ 表示 - 継承 3.0 非移植 ライセンス</a>の下に提供されています。
-    <a href="main.html">戻る</a>
-</body>
+  </head>
+  <body>
+    <header>
+      <h1>Baba Search</h1>
+      <hr />
+    </header>
+    <main>
+      <blockquote id="Baba-Search-Licence"></blockquote>
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"
+        ><img
+          alt="クリエイティブ・コモンズ・ライセンス"
+          style="border-width: 0"
+          src="https://i.creativecommons.org/l/by-sa/3.0/88x31.png" /></a
+      ><br />この ページ内の作品 は
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"
+        >クリエイティブ・コモンズ 表示 - 継承 3.0 非移植 ライセンス</a
+      >の下に提供されています。
+    </main>
+    <footer>
+      <a href="main.html">戻る</a>
+    </footer>
+    <script>
+      const LicenceBody = `
+    MIT License
+
+    Copyright (c) 2021 mmnk-github
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+      `;
+
+      const Licence = document.querySelector("#Baba-Search-Licence");
+      Licence.innerHTML = LicenceBody;
+    </script>
+  </body>
 </html>
