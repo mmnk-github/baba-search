@@ -32,8 +32,15 @@ for d in data:
     # with open("./Pages/image/" + d["name"] + ".gif", "wb") as file:
     #     file.write(r.content)
 
-sym = open("obj_name_data.json", "w")
-json.dump(aisu, sym)
+with open("obj_name_data.json", 'w') as sym:
+    json.dump(aisu, sym)
+
+with open("obj_name_data.json", "r") as sym:
+    obj_name_data = sym.read()
+    print(obj_name_data)
+
+with open("obj_name_data.json.js", "w") as sym:
+    sym.write("const obj_name_data = " + obj_name_data + ";")
 
 # {
 #     "FOFO": {
