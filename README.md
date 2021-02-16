@@ -27,11 +27,3 @@ BABA IS YOU でアナグラム（文字の並び替え）してできる単語�
 miso_soup(課題ガンバレ！)  
 
 ...And You!
-
-##### memo
-
-npmの導入検討など
-npmはNode.jsに入ってる
-[Node](https://nodejs.org/ja/)
-画像編集パッケージはsharpが有名どころらしい
-[Sharp](https://www.npmjs.com/package/sharp)
