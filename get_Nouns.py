@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
+import json
 res = requests.get("https://babaiswiki.fandom.com/wiki/Category:Nouns")
 
 soup = BeautifulSoup(res.content, features="lxml")
@@ -22,6 +23,14 @@ for a in table.select("tr"):
         name = img["alt"][5:-6]
         gif = img["data-src"]
         data.append({"name": name, "gif": gif})
+
+{
+    "FOFO": {
+        "sorted_name": "OOFF",
+        "img": "FOFO.gif"
+    },
+    
+}
 
 # for d in data:
 #     r = requests.get(d["gif"])

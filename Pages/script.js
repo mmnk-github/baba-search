@@ -3,7 +3,7 @@ const babaNames = ["fofo", "baba"]; // 配列(順序アリ)
 const imgObj = {
     fofo: "./image/fofo_27_1.png",
     baba: "hogehoge"
-}; // オブジェクト(順序ある？)
+}; // オブジェクト(順序なし)
 // オブジェクト名: "画像ファイルへのパス"
 
 const form = document.querySelector("#form1");
