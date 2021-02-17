@@ -26,7 +26,7 @@ for a in table.select("tr"):
 aisu = {}
 
 for d in data:
-    aisu[d['name']] = {"sorted_name": sorted(d['name']), "img": "./Pages/image/" + d["name"] + ".gif"}
+    aisu[d['name']] = {"sorted_name": sorted(d['name']), "img": "./image/" + d["name"] + ".gif"}
     # r = requests.get(d["gif"])
     # print(r)
     # with open("./Pages/image/" + d["name"] + ".gif", "wb") as file:
@@ -40,7 +40,7 @@ with open("obj_name_data.json", "r") as sym:
     print(obj_name_data)
 
 with open("obj_name_data.json.js", "w") as sym:
-    sym.write("const obj_name_data = " + obj_name_data + ";")
+    sym.write("let obj_name_data = " + obj_name_data + ";")
 
 # {
 #     "FOFO": {
