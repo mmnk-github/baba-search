@@ -2,9 +2,6 @@
 function subString(A, B){
   let j = 0;
   for(let i = 0; i < A.length; i ++){
-    if(B == 'IMAGE'){
-      console.log(i, j);
-    }
     if(A[i].toUpperCase() === B[j].toUpperCase()){
       j ++;
       if(j == B.length){
@@ -26,13 +23,11 @@ form.addEventListener("submit", (e) => {
   let aisu = input.value;
   let aisuText = "<p>" + aisu + "</p>";
   resBlock.insertAdjacentHTML("afterbegin", aisuText);
-  let aisuSort = aisu.split('').sort();
+  let aisuSort = aisu.toUpperCase().split('').sort();
   for (const [key, value] of Object.entries(obj_name_data)) {
     if (subString(aisuSort, value["sorted_name"])) {
       let img = '<img src="' + value['img'] + '" />';
       resBlock.insertAdjacentHTML("beforeend", "<p>" + img + key + "</p>");
-    }else{
-      console.log("unko");
     }
   }
 });
