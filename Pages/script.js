@@ -21,13 +21,14 @@ form.addEventListener("submit", (e) => {
   e.preventDefault(); //送信しない
   resBlock.innerHTML = "";
   let aisu = input.value;
+  if(aisu == "aisu") location.href = "https://twitter.com/aisu_uu/status/1294125344652324864";
   let aisuText = "<p>" + aisu + "</p>";
   resBlock.insertAdjacentHTML("afterbegin", aisuText);
   let aisuSort = aisu.toUpperCase().split('').sort();
   for (const [key, value] of Object.entries(obj_name_data)) {
     if (subString(aisuSort, value["sorted_name"])) {
       let img = '<img src="' + value['img'] + '" />';
-      resBlock.insertAdjacentHTML("beforeend", "<p>" + img + key + "</p>");
+      resBlock.insertAdjacentHTML("beforeend", "<p>" + img + " " + key + "</p>");
     }
   }
 });
