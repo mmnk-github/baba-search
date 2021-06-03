@@ -2,9 +2,6 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import sys
-res = requests.get("https://babaiswiki.fandom.com/wiki/Category:Nouns")
-
-soup = BeautifulSoup(res.content, features="lxml")
 
 data = []
 
@@ -28,6 +25,12 @@ for a in table.select("tr"):
         name = img["alt"][5:-6]
         gif = img["data-src"]
         data.append({"name": name, "gif": gif})
+        if name == 'GROUP':
+            for subimg in a.select("img"):
+                subname = subimg["alt"][5:-6]
+                if subname == 'GROUP2' or subname == 'GROUP3':
+                    subgif = subimg["data-src"]
+                    data.append({"name": subname, "gif": subgif})
 
 # Operators
 res = requests.get("https://babaiswiki.fandom.com/wiki/Category:Operators")
@@ -55,7 +58,7 @@ for table in soup.select("table"):
             continue
         for img in td.select("img"):
             name = img["alt"][5:-6]
-            if name == 'YOU' or name == 'STOP':
+            if name == 'AUTO':
                 gif = img["src"]
             else:
                 gif = img["data-src"]
@@ -64,6 +67,7 @@ for table in soup.select("table"):
 aisu = {}
 
 for d in data:
+    print(d['name'])
     aisu[d['name']] = {"sorted_name": sorted(d['name']), "img": "./image/" + d["name"] + ".gif"}
     r = requests.get(d["gif"])
     print(r)
