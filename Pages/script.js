@@ -22,7 +22,7 @@ form.addEventListener("submit", (e) => {
   resBlock.innerHTML = "";
   let aisu = input.value;
   if(aisu.length > 100000) location.href = "https://twitter.com/3_3_nk/status/1033066522439081985";
-  if(aisu == "aisu") location.href = "https://twitter.com/aisu_uu/status/1294125344652324864";
+  if(aisu == "aisu") location.href = "https://twitter.com/Sym_otak/status/1369169752770289667";
   let aisuText = "<p>" + aisu + "</p>";
   resBlock.insertAdjacentHTML("afterbegin", aisuText);
   let aisuSort = aisu.toUpperCase().split('').sort();
