@@ -58,10 +58,7 @@ for table in soup.select("table"):
             continue
         for img in td.select("img"):
             name = img["alt"][5:-6]
-            if name == 'AUTO':
-                gif = img["src"]
-            else:
-                gif = img["data-src"]
+            gif = img["data-src"]
             data.append({"name": name, "gif": gif})
 
 aisu = {}
