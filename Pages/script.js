@@ -1,11 +1,20 @@
 // 文字列Bが文字列Aの部分文字列かどうか返す
 function subString(A, B){
   let j = 0;
-  for(let i = 0; i < A.length; i ++){
-    if(A[i].toUpperCase() === B[j].toUpperCase()){
+  let safe = Array.from(A).filter(function(x){return x==='*'}).length;
+  for(let loop = 0; loop <= safe; loop ++){
+    if(loop > 0){
       j ++;
       if(j == B.length){
         return true;
+      }
+    }
+    for(let i = 0; i < A.length; i ++){
+      if(A[i].toUpperCase() === B[j].toUpperCase()){
+        j ++;
+        if(j == B.length){
+          return true;
+        }
       }
     }
   }
